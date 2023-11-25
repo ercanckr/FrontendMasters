@@ -87,3 +87,68 @@ h3,
     line-height: 1;
     margin-bottom: var(--h4);
 }
+img{
+    max-width: 100%;
+    border-radius: var(--radius);
+}
+figure{
+    margin: 0;
+}
+a{
+    color: var(--green);
+}
+a:hover{
+text-decoration: none;
+}
+header{
+    background-color: var(--coffee);
+    padding: 1rem 0;
+    border-bottom: 20px double var(--tan);
+}
+header h1 {
+    color: var(--vanilla);
+    margin-bottom: 0;
+}
+.fancy-text{
+    background: linear-gradient(135deg, var(--mocha) 0%, var(--tan) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 35%;
+    background-position: 0 90%;
+}
+.colors > *{
+    width: 5rem;
+    height: 4rem;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 1rem;
+    border: 1px solid var(--coffee);
+}
+.white{
+    background-color: var(--white);
+}
+.green{
+    background-color: var(--green);
+    color: var(--vanilla);
+}
+.coffee{
+    background-color: var(--coffee);
+    color: var(--vanilla);
+}
+.vanilla{
+    background-color: var(--vanilla);
+}
+.lemon{
+    background-color: var(--lemon);
+}
+.mocha{
+    background-color: var(--mocha);
+    color: var(--vanilla);
+}
+.tan{
+    background-color: var(--tan);
+}
+.blue{
+    background-color: var(--blue);
+    color: var(--vanilla);
+}
