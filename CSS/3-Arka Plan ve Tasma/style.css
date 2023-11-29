@@ -236,9 +236,27 @@ html {
   .wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .number,
-  .one .number{
-background-position: 0% 2rem;
-background-size: 100% 1rem;
+  .one .number {
+    background-position: 0% 2rem;
+    background-size: 100% 1rem;
+  }
+}
+
+@media (min-width:1000px) {
+  .wrapper{
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+  }
+  .card{
+    grid-template-columns: 50px 1fr;
+  }
+  .one{
+    grid-row: 1/3;
+    grid-column: 1/2;
+    grid-template-columns: 50px 0.75fr 1fr;
+    grid-template-rows: 0.25fr 1fr;
   }
 }
