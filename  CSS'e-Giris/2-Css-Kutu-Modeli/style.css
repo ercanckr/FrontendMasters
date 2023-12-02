@@ -1,0 +1,31 @@
+div { 
+    border: 5px solid blue;/* Kenarlik */
+    border-radius: 1rem; /* Yuvarlatılmış köşeler oluşturur. Hap veya daire oluşturmak için büyük bir yarıçap belirtin. */
+    margin-bottom: 2rem;/* Marj, sınırın dışındaki alandır. Marj değerleri pozitif veya negatif olabilir */
+    background-color: lightblue;
+    padding-left: 1rem;/* Dolgu, içerik ile kenarlık arasındaki mesafedir. Dolgu değerleri her zaman pozitif olmalıdır */
+    padding-right: 1rem;
+}
+
+.box1 {
+    border-color: orange;
+    background-color: #ffcc00;
+}
+
+.box2 {}
+
+.box2 p { /* block elementler */
+    border: 2px solid green;
+    margin: 0;
+}
+
+h1 {
+    border: 2px solid green;
+    margin: 0;
+}
+/* inline elementler */
+a,
+strong,
+em {
+    border: 2px solid blue;
+}
