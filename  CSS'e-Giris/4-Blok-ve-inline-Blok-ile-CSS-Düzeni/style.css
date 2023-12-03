@@ -1,0 +1,40 @@
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav li {
+width: 10rem;
+background-color: red;
+border: 3px solid yellow;
+text-align: center;
+margin-bottom: .5rem;
+
+}
+
+
+nav a{
+    border: 3px dotted white;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: .5rem;
+}
+nav a:hover{
+    background-color: white;
+    color: red;
+}
+
+.nav2 li {
+    width: 8rem;
+    background-color: red;
+    border: 3px solid yellow;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: inline-block;
+    
+    }
