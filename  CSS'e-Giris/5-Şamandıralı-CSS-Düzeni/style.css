@@ -1,0 +1,51 @@
+
+
+
+
+/* float
+Elemanı "normal akıştan" çeker ve belirtilen yönde yüzdürür. Elemanın kapladığı alan ortadan kaldırılır. Değerler şunları içerir left: , right,none
+
+Not: Görüntü dışında bir öğeyi yüzdürüyorsanız bir genişlik de belirtmelisiniz. */
+.floatleft {
+    float: left;
+    /* margin: top right bottom left; */
+    margin: 0 1rem 1rem 0;
+    border-radius: 2rem;
+
+}
+
+.floatright {
+    float: right;
+    margin: 1rem 0 0 1rem;
+    border-radius: 5rem;
+}
+
+article {
+    width: 50%;
+    border: 3px solid orange;
+    margin: 0 auto; /* Otomatik Kenar Bosluklari */
+    background-color: aqua;
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+h1{
+    text-align: center;
+    color: burlywood;
+}
+blockquote{
+    border: 5px solid orange;
+    border-radius: 2rem;
+    text-align: center;
+    background-color: yellowgreen;
+    color: white;
+}
+/*  clear
+Yüzerseniz yapmanız gerekenler! Clear normal akışı yeniden kurar. Değerler şunları içerir left: , right,both
+
+Temizlemenin başka yöntemleri de var. Popüler olanı, bu formülü kullanarak ebeveyni kendi kendine temizleme */
+article:after {
+    content: "";
+    display: table;
+    clear: both;
+}
