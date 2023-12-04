@@ -1,0 +1,26 @@
+/* Flexbox'ı kullanmaya başlamak için esnek kapsayıcıda display özelliğini ayarlayın:display: flex; */
+
+/* flex-flowflexbox'ın yönünü ve bazı davranışları ayarlayacaktır. için belirtilen iki değer vardır flex-flow. İlki flex-direction. rowBu genellikle veya olarak ayarlanır column.
+
+İkinci değer ise flex-wrap. Bu, kutuların başka bir satıra/sütuna kaydırılıp kaydırılmayacağını belirtir. Tipik değerler wrapveya'dır nowrap.
+
+Yararlı olabilecek diğer bir özellik ise justify-content. Tüm kutuların satırın başına ( flex-start), satırın sonuna ( flex-end), ortalanacak şekilde ( center) itilmesini mi istiyorsunuz, yoksa satır boyunca ( ) fazladan boşluk dağıtılmasını mı istiyorsunuz space-around? */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+li {
+    border: 1px solid blue;
+    flex-basis: 10%;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Flexbox'ta varsayılan olarak, bir kutu sırası oluşturmaya karar verirseniz tüm kutular varsayılan olarak aynı genişliğe sahip olacaktır. Dolayısıyla, 4 çocuk (veya esnek öğeler) içeren bir sıraya (esnek kap) sahip olmaya karar verirseniz, her çocuğun genişliği %25 olacaktır.
+
+Varsayılan genişliği kullanmak istemiyorsanız özelliği flex-basisesnek öğeye atayın. Kullanmayı seçerseniz bu sayı yüzde olmalıdır. */
