@@ -14,33 +14,85 @@
 			<p>Kaliteli UFO'larımızdan birinin uzaylılarca kaçırılması emrini vermek için aşağıdaki formu doldurun.</p>
 
 			<form> <!-- <form></form>  Öğe formtüm formunuzu çevreler. Gerekli!  -->
-				<h2>İletişim Bilgileriniz</h2>
-				<label for="name">Adınız</label>
-				<!--<label></label> Bir metin etiketini form alanıyla ilişkilendirir. -->
-				<input type="text" id="name" name="name">
-				<!-- <input type="text"> Basit metin giriş alanı. Genel metinleri toplamak için kullanışlıdır (ad, adres, kısa yanıtları düşünün) -->
-				<p>Telefon numarası</p>
-				<p>E-posta</p>
+				<fieldset>
+					<!-- HTML'de "fieldset" etiketi , bir formdaki ilgili verileri gruplamak için kullanılır. "legend" etiketi ise "fieldset" öğesi için bir başlık tanımlar. -->
+					<legend>İletişim Bilgileriniz</legend>
+					<label for="name">Adınız</label>
+					<!--<label></label> Bir metin etiketini form alanıyla ilişkilendirir. -->
+					<input type="text" id="name" name="name">
+					<!-- <input type="text"> Basit metin giriş alanı. Genel metinleri toplamak için kullanışlıdır (ad, adres, kısa yanıtları düşünün) -->
+					<label for="phone">Telefon numarası</label>
+					<input type="tel" id="phone" name="phone" placeholder="Alan Kodunu Unutmayin!"><!-- Placeholder özelliği giriş alanın girilmesi düşünülen değer ile ilgili açıklayıcı kısa ipucu belirtir. İpucu giriş alanında görüntülenir ve odaklanıldığında kaybolur veya pasifleşir. Placeholder özelliği şu giriş alanları ile çalışır: text, search, url, tel, email ve password. -->
 
-				<h2>Kaçırılışın hakkında </h2>
-				<p>Talep edilen tarih</p>
-				<p>Kaç kişinin kaçırılmasını istersiniz?</p>
-				<p>Ne tür UFO'yu tercih edersiniz?</p>
-				<ul>
-					<li>Klasik oval UFO</li>
-					<li>Yıldız Savaşları tarzı İmparatorluk kruvazörü</li>
-					<li>Battlestar Galactica tarzı Viper</li>
-					<li>Borg tarzı küp</li>
-				</ul>
-				<p>Ne tür bir kaçırılma deneyimi istiyorsunuz?</p>
-				<ul>
-					<li>Güneş sistemi turu</li>
-					<li>Uzaylı yemeği ve tartışma</li>
-					<li>Uzaylı dansı dersleri</li>
-					<li>Balina izleme</li>
-				</ul>
-				<p>Özel İstekler:</p>
-				<p>Beni e-posta listene ekle</p>
+					<!-- <input type="tel">
+					Telefon numarası alanı.
+					Masaüstündeki metin alanından farklı görünmüyor ancak çoğu mobil cihazda bir sayı klavyesi görüntülenir. -->
+					<label for="email">E-posta</label>
+					<input type="email" id="email" name="email">
+					<!-- <input type="email">
+					E-posta alanı.
+					Masaüstündeki metin alanından farklı görünmese de çoğu mobil cihazda, kolayca erişilebilen @ sembolüne sahip bir klavye ve bazen de ek tuşlar (.com tuşu gibi) görüntülenir. -->
+				</fieldset>
+				<fieldset>
+					<legend>Kaçırılışın hakkında </legend>
+					<label for="date">Talep edilen tarih</label>
+					<input type="date" id="date" name="date">
+					<!--  <input type="date"> Tarih girişi için kullanışlıdır. -->
+					<label for="qty">Kaç kişinin kaçırılmasını istersiniz?</label>
+					<input type="number" id="qty" name="qty" min="1" max="10">
+					<!-- <input type="number">
+						Numara girişi. Olumlu ve olumsuz gidebilir. Belirtilen aralığın dışında olmaları durumunda sayıların hata kontrolünü yapmaz. Mobil klavyeyi sayılara değiştirebilir.Öznitellikler:
+						min— minimum değeri ayarlayın
+						max— maksimum değeri ayarlayın -->
+					<p>Ne tür UFO'yu tercih edersiniz?</p>
+					<label>
+						<input checked type="radio" name="ufotype" value="classic">
+						Klasik oval UFO
+					</label>
+					<!-- <input type="radio">
+						Radyo düğmeleri — birkaç seçenek arasından tek bir seçim için uygundur. En az iki seçenek olmalı.Öznitellikler:
+						name— bir gruptaki TÜM radyo düğmeleri için her zaman aynıdır — tek bir yanıta ilişkin seçenekleri tanımlar
+						value— her radyo düğmesi için benzersiz — bu seçim nedir?
+						checked— formu bu değer önceden seçilmiş olarak başlatın -->
+					<label>
+						<input type="radio" name="ufotype" value="starwars">
+						Yıldız Savaşları tarzı İmparatorluk kruvazörü
+					</label>
+					<label>
+						<input type="radio" name="ufotype" value="galactica">
+						Battlestar Galactica tarzı Viper
+					</label>
+					<label>
+						<input type="radio" name="ufotype" value="borg">
+						Borg tarzı küp
+					</label>
+					<label for="abtype">
+						Ne tür bir kaçırılma deneyimi istiyorsunuz?
+					</label>
+					<select name="abtype" id="abtype">
+						<option selected>Birini Sec...</option>
+						<option value="tour">Güneş sistemi turu</option>
+						<option value="dinner">Uzaylı yemeği ve tartışma</option>
+						<option value="dance">Uzaylı dansı dersleri</option>
+						<option value="whales">Balina izleme</option>
+					</select>
+					<!-- <select></select>
+						Açılır menüyü seçin — çok sayıda seçenek arasından tek bir seçeneği seçmek için uygundur. Ziyaretçinin ne bekleyeceğini bildiği durumlarda en iyi şekilde kullanılır -->
+					<label for="comments">
+						Özel İstekler:
+					</label>
+					<textarea name="comments" id="comments"></textarea>
+					<!-- <textarea></textarea> Genişletilmiş yorumlar için büyük bir kutu. -->
+			<label for="subscribe">
+				<input type="checkbox" name="subscribe" value="subscribe" checked>	Beni e-posta listene ekle
+			</label>
+			<!-- <input type="checkbox">
+				Onay kutuları — birkaç seçenek arasında birden fazla seçenek için uygundur. Tek bir onay kutusu olabilir.Öznitellikler:
+				name— isteğe bağlıdır, ancak bu onay kutusunun neyle ilgili olduğunu açıklar ( ile birlikte ID)
+				value— her onay kutusu için benzersiz değer - bu seçim nedir?
+				checked— formu bu öğe seçili olarak başlatın -->
+				</fieldset>
+
 			</form>
 
 		</section>
