@@ -13,16 +13,19 @@
 			<h1>Uzaylı Kaçırma Sipariş Formu</h1>
 			<p>Kaliteli UFO'larımızdan birinin uzaylılarca kaçırılması emrini vermek için aşağıdaki formu doldurun.</p>
 
-			<form> <!-- <form></form>  Öğe formtüm formunuzu çevreler. Gerekli!  -->
+			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="post">
+				<!-- <form></form>  Öğe formtüm formunuzu çevreler. Gerekli!  -->
+				<input type="hidden" name="send_to" value="cakirercn@gmail.com">
 				<fieldset>
 					<!-- HTML'de "fieldset" etiketi , bir formdaki ilgili verileri gruplamak için kullanılır. "legend" etiketi ise "fieldset" öğesi için bir başlık tanımlar. -->
 					<legend>İletişim Bilgileriniz</legend>
 					<label for="name">Adınız</label>
-					<!--<label></label> Bir metin etiketini form alanıyla ilişkilendirir. -->
+					<!--<label></label> Bir metin etiketini form alanıyla ∏ilişkilendirir. -->
 					<input type="text" id="name" name="name">
 					<!-- <input type="text"> Basit metin giriş alanı. Genel metinleri toplamak için kullanışlıdır (ad, adres, kısa yanıtları düşünün) -->
 					<label for="phone">Telefon numarası</label>
-					<input type="tel" id="phone" name="phone" placeholder="Alan Kodunu Unutmayin!"><!-- Placeholder özelliği giriş alanın girilmesi düşünülen değer ile ilgili açıklayıcı kısa ipucu belirtir. İpucu giriş alanında görüntülenir ve odaklanıldığında kaybolur veya pasifleşir. Placeholder özelliği şu giriş alanları ile çalışır: text, search, url, tel, email ve password. -->
+					<input type="tel" id="phone" name="phone"
+						placeholder="Alan Kodunu Unutmayin!"><!-- Placeholder özelliği giriş alanın girilmesi düşünülen değer ile ilgili açıklayıcı kısa ipucu belirtir. İpucu giriş alanında görüntülenir ve odaklanıldığında kaybolur veya pasifleşir. Placeholder özelliği şu giriş alanları ile çalışır: text, search, url, tel, email ve password. -->
 
 					<!-- <input type="tel">
 					Telefon numarası alanı.
@@ -83,16 +86,16 @@
 					</label>
 					<textarea name="comments" id="comments"></textarea>
 					<!-- <textarea></textarea> Genişletilmiş yorumlar için büyük bir kutu. -->
-			<label for="subscribe">
-				<input type="checkbox" name="subscribe" value="subscribe" checked>	Beni e-posta listene ekle
-			</label>
-			<!-- <input type="checkbox">
+					<label for="subscribe">
+						<input type="checkbox" name="subscribe" value="subscribe" checked> Beni e-posta listene ekle
+					</label>
+					<!-- <input type="checkbox">
 				Onay kutuları — birkaç seçenek arasında birden fazla seçenek için uygundur. Tek bir onay kutusu olabilir.Öznitellikler:
 				name— isteğe bağlıdır, ancak bu onay kutusunun neyle ilgili olduğunu açıklar ( ile birlikte ID)
 				value— her onay kutusu için benzersiz değer - bu seçim nedir?
 				checked— formu bu öğe seçili olarak başlatın -->
 				</fieldset>
-
+				<button type="submit">Gonder!</button>
 			</form>
 
 		</section>
@@ -107,5 +110,5 @@
 		</aside>
 	</div>
 </body>
-
+<script src="/Formlar/begin/js/forms.js"></script>
 </html>
