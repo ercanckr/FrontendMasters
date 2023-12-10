@@ -1,6 +1,7 @@
 /* burada bildirilen değişkenler - bunlar sayfalarımızın renkleri, ayrıca 
 yazı tipi yığınları ve boyutlarıdır. */
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap');
+
 :root {
     --black: #171321;
     --dkblue: #0d314b;
@@ -96,15 +97,17 @@ nav {
     padding: 1rem;
 
 }
-nav h1 a{
-font-family: var(--sans);
-}
-.fa-regular{
-    color: var(--hotmag);
-    
+
+nav h1 a {
+    font-family: var(--sans);
 }
 
-nav ul{
+.fa-regular {
+    color: var(--hotmag);
+
+}
+
+nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -114,28 +117,73 @@ nav ul{
     align-items: center;
     gap: 2rem;
 }
-nav li:first-child{
+
+nav li:first-child {
     flex-basis: 100%;
     text-align: center;
 }
-nav [class*="fa-"]{
+
+nav [class*="fa-"] {
     font-size: 150%;
     color: var(--aqua);
     transition: .5s ease;
 }
-nav h1 [class*="fa-"]{
+
+nav h1 [class*="fa-"] {
     font-size: 100%;
     color: var(--aqua);
 }
+
 /* [class*="fa-"] bu seçici, class özelliği içinde "fa-" alt dizesini içeren tüm öğeleri seçer. Bu genellikle popüler bir ikon font kütüphanesi olan Font Awesome gibi durumlarda kullanılır. Font Awesome ikonları genellikle "fa-" öneki ile gelir, ve bu seçici bu tür ikonları seçmek için kullanılabilir. */
 
-nav a{
+nav a {
     color: var(--white);
-    text-decoration: none  ;
+    text-decoration: none;
     display: block;
     transition: .5s ease;
+    text-transform: capitalize;
 }
+
 nav a:hover,
-nav [class*="fa-"]:hover{
+nav [class*="fa-"]:hover {
     color: var(--magenta);
+}
+
+.button {
+    background-color: var(--magenta);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: var(--white);
+    background-color: var(--hotmag);
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
+
+footer{
+    text-align: center;
+}
+footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
 }
