@@ -1,0 +1,82 @@
+/* Medya sorgusunun dışında kalanların mobil cihazlar için olduğunu unutmayın. Temel satır bildirimi değişmez. */
+
+/* Temel şekil ve başlık stili */
+/* Tarayıcı tarafından ayarlanan kenar boşluğunu kapat */
+figure {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+}
+
+/* caption styling  */
+figcaption {
+  background-color: #001219;
+  color: white;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.7;
+}
+
+/* h2'deki üst kenar boşluğunu, p'deki alt kenar boşluğunu azaltır ve ikisi arasında 0,5rem boşluk bırakır */
+figcaption * {
+  margin: 0.5rem;
+}
+
+/* görüntüleri esnek hale getirme  */
+img {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 1%;
+  }
+
+  figure {
+    flex-basis: 48%;
+  }
+}
+
+/* tüm boyutlarda geçerli oldukları için MQ'ların dışında */
+.reverse {
+  flex-flow: row-reverse wrap;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+/* varsayılan stil, duyarlı tasarımda bile burada değişiklik yapılmasına gerek yok */
+
+/* düzeni kenarlık kutusu modeline göre ayarladık */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* yazı tipi ailesini ve arka plan gradyanını ayarladık */
+body {
+  padding: 0;
+  border: 0;
+  font-family: Tahoma, Arial, sans-serif;
+}
