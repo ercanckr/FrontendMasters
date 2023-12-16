@@ -49,33 +49,54 @@ section ul {
     padding: 0;
     margin: 0;
 }
+
 /* header and nav style */
-.header{
+.header {
     background-color: var(--color5);
 }
 
-header{
+header {
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
-nav ul{
-    list-style-type: none ;
+
+nav ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-}
-nav ul{
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: space-around;
+    align-items: center;
 }
 
-nav a{ 
+nav li {
+    flex-basis: 48%;
+    margin-bottom: 0.5rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav a {
     text-decoration: none;
     font-size: 1.2rem;
-    color: var(--color1);
+    color: white;
+    background-color: var(--color10);
     display: block;
-    padding: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+nav li:first-child a{
+    background-color: transparent;
+}
+nav a:hover{
+    background-color: var(--color1);
+    color: var(--color5);
 }
 
 
@@ -180,6 +201,7 @@ figcaption a {
 .footer {
     background-color: var(--color5);
 }
+
 /* genişlik sınırlı ve sayfanın geri kalanıyla aynı hizada olacak şekilde ortalanmış */
 
 footer {
@@ -189,6 +211,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 /* h4 üst kenar boşluğu tarayıcıdan gelir - .social öğesinin üst kısmı ile adresin hizalanmasını engeller */
 
 footer h4 {
@@ -202,6 +225,7 @@ footer ul {
     display: flex;
     flex-flow: row wrap;
 }
+
 /* düğmeler arasında sabit bir mesafe olmasını istiyoruz, böylece her zaman tıklanabilir durumda kalırlar. flex-basis bunu yapmaz - bazen düğmeler birbirine çok yakındır. */
 
 footer li {
@@ -235,26 +259,50 @@ footer address {
     address {
         flex-basis: 49.5%;
     }
-/* nesne konumunu kapat, nesne uyumunu devral: cover */
+
+    /* nesne konumunu kapat, nesne uyumunu devral: cover */
     figure img {
         object-position: 0;
     }
-/* görüntü: akış kökü kayan noktayı temizler!!!! max-width metin satırı uzunluğunu daha kısa tutar */
+
+    /* görüntü: akış kökü kayan noktayı temizler!!!! max-width metin satırı uzunluğunu daha kısa tutar */
     .missiontext {
         display: flow-root;
         max-width: 900px;
     }
-/* geniş genişliğe sahip bir görüntüyle çalışıyoruz, böylece şeklin dışındaki çokgen noktalarını istediğimiz yere ayarlama esnekliğine sahip oluyoruz. Görüntünün kenarları yerleşimlerini sınırlar. Firefox'ta, tarayıcı araçlarında şekil-dışarıda çizim yapabilirsiniz */
+
+    /* geniş genişliğe sahip bir görüntüyle çalışıyoruz, böylece şeklin dışındaki çokgen noktalarını istediğimiz yere ayarlama esnekliğine sahip oluyoruz. Görüntünün kenarları yerleşimlerini sınırlar. Firefox'ta, tarayıcı araçlarında şekil-dışarıda çizim yapabilirsiniz */
 
     .missionimg {
         float: left;
         shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
         max-height: 211px;
     }
+
     /* remove the top margin assigned above that provided space between .social and address */
-    
+
     footer address {
         margin-top: 0;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 1.2em;
+    }
+
+    nav li {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        color: var(--color1);
+        background-color: transparent;
+    }
+
+    nav a:hover {
+        color: var(--color2);
+        background-color: transparent;
     }
 }
 
@@ -275,21 +323,25 @@ footer address {
     address {
         flex-basis: 65.5%;
     }
+
     /* navigation - logo ortalama */
-nav ul{
-    justify-content: flex-end;
-}
-nav li:first-child{
-    flex-basis: auto;
-    margin: 0 auto;
-    order: 2;
-}
-nav li:nth-child(2),
-nav li:nth-child(3){
-order: 1;
-}
-nav li:nth-child(4),
-nav li:nth-child(5){
-order: 3;
-}
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        margin: 0 auto;
+        order: 2;
+    }
+
+    nav li:nth-child(2),
+    nav li:nth-child(3) {
+        order: 1;
+    }
+
+    nav li:nth-child(4),
+    nav li:nth-child(5) {
+        order: 3;
+    }
 }
